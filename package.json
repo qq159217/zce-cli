@@ -1,0 +1,23 @@
+{
+  "name": "zce-cli",
+  "version": "0.0.0",
+  "description": "my command line interface helper",
+  "keywords": [
+    "cli",
+    "zce"
+  ],
+  "homepage": "https://github.com/zce/zce-cli#readme",
+  "bugs": {
+    "url": "https://github.com/zce/zce-cli/issues"
+  },
+  "license": "MIT",
+  "author": "zce <w@zce.me> (https://zce.me/)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/zce-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
