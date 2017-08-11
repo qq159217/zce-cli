@@ -1,4 +1,4 @@
 # zce-cli
 
-> my cli helper
+> A very simple scaffolding CLI tool for myself
 

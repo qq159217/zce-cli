@@ -1,7 +1,7 @@
 {
   "name": "zce-cli",
-  "version": "0.0.0",
-  "description": "my command line interface helper",
+  "version": "0.1.0-alpha.1",
+  "description": "A very simple scaffolding CLI tool for myself",
   "keywords": [
     "cli",
     "zce"
@@ -12,12 +12,34 @@
   },
   "license": "MIT",
   "author": "zce <w@zce.me> (https://zce.me/)",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "bin": {
+    "zce": "bin/zce.js",
+    "zce-init": "bin/zce-init.js",
+    "zce-list": "bin/zce-list.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zce/zce-cli.git"
   },
   "scripts": {
+    "lint": "eslint test/e2e/test.js lib bin/* --env mocha",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "inquirer": "^3.2.1",
+    "path-exists": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "preferGlobal": true
 }
