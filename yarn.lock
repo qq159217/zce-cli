@@ -1577,12 +1577,6 @@ slice-ansi@0.0.4:
   version "0.0.4"
   resolved "http://registry.npm.taobao.org/slice-ansi/download/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
 
-slug@^0.9.1:
-  version "0.9.1"
-  resolved "http://registry.npm.taobao.org/slug/download/slug-0.9.1.tgz#af08f608a7c11516b61778aa800dce84c518cfda"
-  dependencies:
-    unicode ">= 0.3.1"
-
 sort-keys-length@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/sort-keys-length/download/sort-keys-length-1.0.1.tgz#9cb6f4f4e9e48155a6aa0671edd336ff1479a188"
@@ -1785,10 +1779,6 @@ unbzip2-stream@^1.0.9:
   dependencies:
     buffer "^3.0.1"
     through "^2.3.6"
-
-"unicode@>= 0.3.1":
-  version "9.0.1"
-  resolved "http://registry.npm.taobao.org/unicode/download/unicode-9.0.1.tgz#104706272c6464c574801be1b086f7245cf25158"
 
 unyield@0.0.1:
   version "0.0.1"

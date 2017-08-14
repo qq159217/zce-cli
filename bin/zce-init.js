@@ -5,7 +5,6 @@ const chalk = require('chalk')
 const program = require('commander')
 const inquirer = require('inquirer')
 const util = require('../lib/util')
-const logger = require('../lib/logger')
 const fetch = require('../lib/fetch')
 const generate = require('../lib/generate')
 
@@ -26,28 +25,41 @@ program
   .parse(process.argv)
   .args.length || program.help()
 
+// padding
+console.log()
+process.on('exit', () => console.log())
+
 const [ template, project ] = program.args
 const target = path.resolve(project || '.')
 
 util.pathExists(target)
   .then(exists => {
     if (!exists) return { ok: true }
-    return inquirer.prompt({
+    const question = {
       name: 'ok',
       type: 'confirm',
       message: target === process.cwd()
         ? 'Generate project in current directory?'
         : 'Target directory exists. Continue?'
-    })
+    }
+    return inquirer.prompt(question)
   })
   .then(answer => {
-    if (!answer.ok) throw new Error('You chose to cancel.')
+    if (!answer.ok) throw new Error('You have to cancel the init task.')
     return util.pathLocally(template)
       ? util.getTemplatePath(template)
       : fetch(template, program.offline)
   })
-  .then(source => generate(source, target))
+  .then(source => {
+    if (!source) throw new Error('Template is not found.')
+    return generate(source, target)
+  })
+  .then(metadata => {
+    if (typeof metadata.complete === 'function') {
+      metadata.complete(metadata)
+    }
+  })
   .catch(err => {
-    logger.error(err)
+    console.error(`\n😞  ${err.message}`)
     process.exit()
   })

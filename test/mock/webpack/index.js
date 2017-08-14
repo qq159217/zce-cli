@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   prompts: {
     name: {
@@ -39,6 +41,12 @@ module.exports = {
     lowercase: str => str.toLowerCase()
   },
   complete: e => {
-    console.log('Good luck')
+    console.log('  To get started:')
+    console.log()
+    e.dest === process.cwd() && console.log(`    $ cd ${path.relative(process.cwd(), e.dest)}`)
+    console.log('    $ npm install')
+    console.log('    $ npm run dev')
+    console.log()
+    console.log('  Good luck')
   }
 }
