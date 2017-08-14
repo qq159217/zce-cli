@@ -6,6 +6,7 @@ const chalk = require('chalk')
 const program = require('commander')
 const inquirer = require('inquirer')
 const util = require('../lib/util')
+const logger = require('../lib/logger')
 const fetch = require('../lib/fetch')
 const generate = require('../lib/generate')
 
@@ -32,7 +33,6 @@ const target = path.resolve(project || '.')
 util.pathExists(target)
   .then(exists => {
     if (!exists) return { ok: true }
-
     return inquirer.prompt({
       name: 'ok',
       type: 'confirm',
@@ -48,8 +48,11 @@ util.pathExists(target)
       : fetch(template, program.offline)
   })
   .then(source => {
-    return generate(source, target)
+    if (!source) throw new Error('Template is not found.')
+    const context = { source, target }
+    return generate(context)
   })
   .catch(err => {
-    console.log(`\n  ${err.message}`)
+    logger.error(err)
+    process.exit()
   })

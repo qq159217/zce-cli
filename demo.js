@@ -8,4 +8,13 @@ const path = require('path')
 
 const generate = require('./lib/generate')
 
-generate(path.join(__dirname, 'test/mock/demo'), path.join(__dirname, 'test/dist'))
+const context = {
+  source: path.join(__dirname, 'test/mock/jekyll'),
+  target: path.join(__dirname, 'test/dist')
+}
+
+generate(context)
+  .then(context => {
+    context.template.compile && context.template.compile()
+  })
+  .catch(err => console.log(err))

@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   filters: {
-    '_sass/**': 'sass'
+    '_sass/**': e => e.sass
   },
   helpers: {
     uppercase: str => str.toUpperCase(),
