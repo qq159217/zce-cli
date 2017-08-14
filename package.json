@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "author": "zce <w@zce.me> (https://zce.me/)",
-  "main": "lib/index.js",
+  "main": "lib/generate.js",
   "bin": {
     "zce": "bin/zce.js",
     "zce-init": "bin/zce-init.js"
@@ -23,8 +23,9 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "e2e": "",
-    "test": "mocha test/unit"
+    "unit": "echo WIP",
+    "e2e": "echo WIP",
+    "test": "npm run lint && npm run unit && npm run e2e"
   },
   "dependencies": {
     "chalk": "^2.1.0",
