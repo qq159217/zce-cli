@@ -4,10 +4,10 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM download][download-image]][download-url]
 
-[![Dependency Status][dependency-image]][dependency-url]
-[![devDependency Status][devdependency-image]][devdependency-url]
 [![License][license-image]][license-url]
 [![Code Style][style-image]][style-url]
+[![Dependency Status][dependency-image]][dependency-url]
+[![devDependency Status][devdependency-image]][devdependency-url]
 
 [travis-image]: https://img.shields.io/travis/zce/zce-cli.svg
 [travis-url]: https://travis-ci.org/zce/zce-cli
