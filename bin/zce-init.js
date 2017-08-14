@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
 const program = require('commander')
@@ -47,11 +46,7 @@ util.pathExists(target)
       ? util.getTemplatePath(template)
       : fetch(template, program.offline)
   })
-  .then(source => {
-    if (!source) throw new Error('Template is not found.')
-    const context = { source, target }
-    return generate(context)
-  })
+  .then(source => generate(source, target))
   .catch(err => {
     logger.error(err)
     process.exit()

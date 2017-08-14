@@ -8,4 +8,5 @@
 - [ ] List
 - [ ] CLI padding
 - [ ] CLI update notify
+- [ ] Plugins
 - [ ] Coverage

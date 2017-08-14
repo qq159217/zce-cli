@@ -15,15 +15,15 @@
   "main": "lib/index.js",
   "bin": {
     "zce": "bin/zce.js",
-    "zce-init": "bin/zce-init.js",
-    "zce-list": "bin/zce-list.js"
+    "zce-init": "bin/zce-init.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zce/zce-cli.git"
   },
   "scripts": {
-    "lint": "eslint test/e2e/test.js lib bin/* --env mocha",
+    "lint": "eslint .",
+    "e2e": "",
     "test": "mocha test/unit"
   },
   "dependencies": {
@@ -35,12 +35,16 @@
     "metalsmith": "^2.3.0",
     "minimatch": "^3.0.4",
     "ora": "^1.3.0",
+    "rc": "^1.2.1",
     "rimraf": "^2.6.1",
-    "slug": "^0.9.1"
+    "slug": "^0.9.1",
+    "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0"

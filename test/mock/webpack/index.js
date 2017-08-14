@@ -7,7 +7,7 @@ module.exports = {
     description: {
       type: 'input',
       message: 'Project description',
-      default: 'A jekyll project'
+      default: 'A webpack project'
     },
     author: {
       type: 'input',
@@ -37,14 +37,6 @@ module.exports = {
   helpers: {
     uppercase: str => str.toUpperCase(),
     lowercase: str => str.toLowerCase()
-  },
-  plugins: {
-    before: (app, opts, helpers) => {
-      console.log('plugin before')
-    },
-    after: (app, opts, helpers) => {
-      console.log('plugin after')
-    }
   },
   complete: e => {
     console.log('Good luck')
