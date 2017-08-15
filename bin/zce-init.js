@@ -55,6 +55,9 @@ util.pathExists(target)
   .then(metadata => {
     if (typeof metadata.complete === 'function') {
       metadata.complete(metadata)
+    } else if (typeof metadata.complete === 'string') {
+      const message = `\`${metadata.complete.replace(/`/g, '\\`')}\``
+      console.log(eval(message))
     }
   })
   .catch(err => {

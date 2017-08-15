@@ -46,7 +46,5 @@ module.exports = {
       console.log('plugin after')
     }
   },
-  complete: e => {
-    console.log('Good luck')
-  }
+  complete: '→ ${metadata.dest}'
 }
