@@ -38,15 +38,28 @@ $ npm i zce-cli -g
 ## Usage
 
 ```sh
+# list available official templates
+$ zce list
+
+# generate a new project from a template
 $ zce init <template-name> my-project
 ```
+
+## Official Templates
+
+> https://github.com/zce-templates
+
+- [nm](https://github.com/zce-templates/nm) - Node module boilerplate
+- [jekyll](https://github.com/zce-templates/jekyll) - Static site by Jekyll
+- [webapp](https://github.com/zce-templates/webapp) - Modern webapps
+- [x-pages](https://github.com/zce-templates/x-pages) - Static site by x-pages
 
 ## TODOS
 
 - [x] Init
 - [x] CLI padding
+- [x] List
 - [ ] Repo default
-- [ ] List
 - [ ] CLI update notify
 - [ ] Plugins
 - [ ] unit && e2e

@@ -15,7 +15,8 @@
   "main": "lib/generate.js",
   "bin": {
     "zce": "bin/zce.js",
-    "zce-init": "bin/zce-init.js"
+    "zce-init": "bin/zce-init.js",
+    "zce-list": "bin/zce-list.js"
   },
   "repository": {
     "type": "git",

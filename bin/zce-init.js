@@ -25,9 +25,7 @@ program
   .parse(process.argv)
   .args.length || program.help()
 
-// padding
-console.log()
-process.on('exit', () => console.log())
+util.padding()
 
 const [ template, project ] = program.args
 const target = path.resolve(project || '.')
