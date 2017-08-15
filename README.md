@@ -45,6 +45,7 @@ $ zce init <template-name> my-project
 
 - [x] Init
 - [x] CLI padding
+- [ ] Repo default
 - [ ] List
 - [ ] CLI update notify
 - [ ] Plugins
