@@ -47,6 +47,6 @@ module.exports = {
     console.log('    $ npm install')
     console.log('    $ npm run dev')
     console.log()
-    console.log('  Good luck')
+    console.log('  Good luck~')
   }
 }
