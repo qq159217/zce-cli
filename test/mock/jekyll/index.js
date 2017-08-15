@@ -1,4 +1,10 @@
 module.exports = {
+  name: 'jekyll',
+  version: '0.1.0',
+  template: 'template',
+  metadata: {
+    title: 'jekyll-boilerplate'
+  },
   prompts: {
     name: {
       type: 'input',
@@ -32,7 +38,7 @@ module.exports = {
     }
   },
   filters: {
-    '_sass/**': e => e.sass
+    '_sass/**': a => a.sass
   },
   helpers: {
     uppercase: str => str.toUpperCase(),
@@ -46,5 +52,14 @@ module.exports = {
       console.log('plugin after')
     }
   },
-  complete: '→ {{dest}}'
+  complete: '{{@src}} → {{@dest}}'
+  // complete: context => {
+  //   console.log('  To get started:')
+  //   console.log()
+  //   context.inPlace || console.log(`    $ cd ${require('path').relative(process.cwd(), context.dest)}`)
+  //   console.log('    $ npm install')
+  //   console.log('    $ npm run dev')
+  //   console.log()
+  //   console.log('  Good luck~')
+  // }
 }

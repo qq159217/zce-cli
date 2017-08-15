@@ -51,8 +51,9 @@ $ zce init <template-name> my-project
 
 - [nm](https://github.com/zce-templates/nm) - Node module boilerplate
 - [jekyll](https://github.com/zce-templates/jekyll) - Static site by Jekyll
-- [webapp](https://github.com/zce-templates/webapp) - Modern webapps
+- [webapp](https://github.com/zce-templates/webapp) - Modern web app
 - [x-pages](https://github.com/zce-templates/x-pages) - Static site by x-pages
+- [electron](https://github.com/zce-templates/electron) - Electron app
 
 ## TODOS
 
