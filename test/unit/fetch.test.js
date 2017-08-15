@@ -1,16 +1,35 @@
-const os = require('os')
 const fs = require('fs')
-const path = require('path')
 const assert = require('assert')
 const fetch = require('../../lib/fetch')
 
-describe('lib/fetch', () => {
-  describe('#fetch1', () => {
-    it('should fetch https://github.com/zce-templates/demo', done => {
-      return fetch('demo')
-        .then(source => {
-          const exists = fs.existsSync(path.join(os.homedir(), '.zce-templates/demo'))
-        })
+describe('lib/fetch', function () {
+  this.timeout(5000)
+
+  describe('#fetch-with-template-name', () => {
+    it('should fetch repo: https://github.com/zce-templates/mock-unit', () => {
+      return fetch({ template: 'mock-unit' })
+        .then(source => assert.ok(fs.existsSync(source)))
+    })
+  })
+
+  describe('#fetch-with-repo-name', () => {
+    it('should fetch repo: https://github.com/zce-templates/mock-unit', () => {
+      return fetch({ template: 'zce-templates/mock-unit' })
+        .then(source => assert.ok(fs.existsSync(source)))
+    })
+  })
+
+  describe('#fetch-with-offline-mode', () => {
+    it('should find cache: https://github.com/zce-templates/mock-unit', () => {
+      return fetch({ template: 'zce-templates/mock-unit', offline: true })
+        .then(source => assert.ok(fs.existsSync(source)))
+    })
+  })
+
+  describe('#fetch-with-full-uri', () => {
+    it('should fetch repo: https://coding.net/u/zce/p/mock-unit/git/archive/master', () => {
+      return fetch({ template: 'https://coding.net/u/zce/p/mock-unit/git/archive/master' })
+        .then(source => assert.ok(fs.existsSync(source)))
     })
   })
 })
