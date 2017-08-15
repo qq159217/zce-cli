@@ -43,7 +43,7 @@ module.exports = {
   complete: e => {
     console.log('  To get started:')
     console.log()
-    e.dest === process.cwd() || console.log(`    $ cd ${path.relative(process.cwd(), e.dest)}`)
+    e.inPlace || console.log(`    $ cd ${path.relative(process.cwd(), e.dest)}`)
     console.log('    $ npm install')
     console.log('    $ npm run dev')
     console.log()
