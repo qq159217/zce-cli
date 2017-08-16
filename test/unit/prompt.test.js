@@ -4,10 +4,10 @@ const prompt = require('../../lib/prompt')
 
 const prompts = {
   name: { type: 'input', message: 'Project name' },
-  author: { type: 'input', message: "Project author" },
-  version: { type: 'input', message: "Project version" },
-  license: { type: 'input', message: "Project license" },
-  repository: { type: 'input', message: "Project repository" }
+  author: { type: 'input', message: 'Project author' },
+  version: { type: 'input', message: 'Project version' },
+  license: { type: 'input', message: 'Project license' },
+  repository: { type: 'input', message: 'Project repository' }
 }
 
 const patchInquirer = fake => {
