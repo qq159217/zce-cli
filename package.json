@@ -24,9 +24,10 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "unit": "mocha test/unit/util.test.js",
+    "unit": "mocha test/unit/*.test.js",
     "e2e": "echo WIP",
-    "test": "npm run lint && npm run unit && npm run e2e"
+    "test": "npm run lint && npm run unit && npm run e2e",
+    "cover": "istanbul cover _mocha -- --recursive test/**/*.test.js"
   },
   "dependencies": {
     "chalk": "^2.1.0",
@@ -50,6 +51,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.5.0"
   },
   "engines": {

@@ -1,10 +1,9 @@
 const os = require('os')
-const fs = require('fs')
 const path = require('path')
 const assert = require('assert')
 const util = require('../../lib/util')
 
-describe('lib/util', function () {
+describe('lib/util', () => {
   describe('#existsSync', () => {
     it('Should return true when the path exists', () => {
       assert.ok(util.existsSync(process.cwd()))
@@ -132,6 +131,7 @@ describe('lib/util', function () {
   })
 
   describe('#eval', () => {
+    /* eslint-disable no-template-curly-in-string */
     it('Should return `foo bar` when input `foo ${msg}` and { msg: \'bar\' }', () => {
       assert.equal(
         'foo bar',
