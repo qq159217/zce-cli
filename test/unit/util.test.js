@@ -4,6 +4,12 @@ const assert = require('assert')
 const util = require('../../lib/util')
 
 describe('lib/util', () => {
+  describe('#exists', () => {
+    it('Should return true when the path exists', () => {
+      return util.exists(process.cwd())
+    })
+  })
+
   describe('#existsSync', () => {
     it('Should return true when the path exists', () => {
       assert.ok(util.existsSync(process.cwd()))
