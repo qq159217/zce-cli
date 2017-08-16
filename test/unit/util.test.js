@@ -103,6 +103,13 @@ describe('lib/util', () => {
         util.tildify(os.homedir())
       )
     })
+
+    it('Should return `/foo` when input `/foo`', () => {
+      assert.equal(
+        '/foo',
+        util.tildify('/foo')
+      )
+    })
   })
 
   describe('#untildify', () => {
@@ -117,6 +124,13 @@ describe('lib/util', () => {
       assert.equal(
         os.homedir(),
         util.untildify('~')
+      )
+    })
+
+    it('Should return `/foo` when input `/foo`', () => {
+      assert.equal(
+        '/foo',
+        util.untildify('/foo')
       )
     })
   })
@@ -136,6 +150,13 @@ describe('lib/util', () => {
       assert.equal(
         'foo bar',
         util.eval('`foo ${msg}`', { msg: 'bar' })
+      )
+    })
+
+    it('Should throw when code is invalid', () => {
+      assert.throws(
+        () => util.eval('fake code', { msg: 'bar' }),
+        /evaluating/
       )
     })
   })

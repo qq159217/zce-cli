@@ -56,8 +56,17 @@ describe('lib/generate', () => {
       return generate(src, dest, answers, options).then(files => {
         assert.equal('demo.txt', Object.keys(files)[0])
         const content = fs.readFileSync(path.join(dest, 'demo.txt'), 'utf8')
-        assert.equal('HELPERS', content.trim())
+        assert.equal('HELPERS\n(1 === 1)\n(1 !== 2)', content.trim())
       })
+    })
+  })
+
+  describe('#generate-error', () => {
+    it('should generate error -> build/error', () => {
+      const src = path.join(__dirname, '../mock/error')
+      const dest = path.join(__dirname, '../build/error')
+      const answers = {}
+      return generate(src, dest, answers).catch(assert.ok)
     })
   })
 })

@@ -1,6 +1,7 @@
 # zce-cli
 
 [![Build Status][travis-image]][travis-url]
+[![codecov][codecov-image]][codecov-url]
 [![NPM version][npm-image]][npm-url]
 [![NPM download][download-image]][download-url]
 
@@ -11,6 +12,8 @@
 
 [travis-image]: https://img.shields.io/travis/zce/zce-cli.svg
 [travis-url]: https://travis-ci.org/zce/zce-cli
+[codecov-image]: https://codecov.io/gh/zce/zce-cli/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/zce/zce-cli
 [npm-image]: https://img.shields.io/npm/v/zce-cli.svg
 [npm-url]: https://npmjs.org/package/zce-cli
 [download-image]: https://img.shields.io/npm/dm/zce-cli.svg
@@ -61,8 +64,9 @@ $ zce init <template-name> my-project
 - [x] CLI padding
 - [x] List
 - [x] Repo default
-- [ ] unit && e2e
-- [ ] Coverage
+- [x] unit test
+- [x] Coverage
+- [ ] e2e test
 - [ ] Template docs
 - [ ] CLI update notify
 - [ ] Plugins
