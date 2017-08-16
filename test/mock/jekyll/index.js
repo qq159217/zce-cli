@@ -45,10 +45,10 @@ module.exports = {
     lowercase: str => str.toLowerCase()
   },
   plugins: {
-    before: (app, opts, helpers) => {
+    before: (app, context) => {
       console.log('plugin before')
     },
-    after: (app, opts, helpers) => {
+    after: (app, context) => {
       console.log('plugin after')
     }
   },

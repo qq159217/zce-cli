@@ -61,7 +61,8 @@ $ zce init <template-name> my-project
 - [x] CLI padding
 - [x] List
 - [x] Repo default
-- [ ] Plugins
 - [ ] unit && e2e
 - [ ] Coverage
+- [ ] Template docs
 - [ ] CLI update notify
+- [ ] Plugins

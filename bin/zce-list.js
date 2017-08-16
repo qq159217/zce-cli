@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
+const program = require('commander')
 const list = require('../lib/list')
 
-list().catch(err => {
-  console.error(`\n😞  ${err.message}\n`)
-  process.exit()
-})
+program
+  .option('-s, --short', 'short mode')
+  .option('--debug', 'debug mode')
+  .parse(process.argv)
+
+list(program)
