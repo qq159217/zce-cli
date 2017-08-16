@@ -25,14 +25,14 @@ program
 
 const dest = path.resolve(program.args[1] || '.')
 
-const context = {
+init({
   /**
    * Destination path
    * @type {String}
    */
   dest: dest,
   /**
-   * Name
+   * Default name
    * @type {String}
    */
   name: path.basename(dest),
@@ -56,6 +56,4 @@ const context = {
    * @type {Boolean}
    */
   debug: program.debug
-}
-
-init(context)
+})
