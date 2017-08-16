@@ -23,9 +23,9 @@
     "url": "git+https://github.com/zce/zce-cli.git"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "unit": "mocha test/unit/*.test.js",
-    "e2e": "echo WIP",
+    "e2e": "mocha test/e2e/*.test.js",
     "test": "npm run lint && npm run unit && npm run e2e",
     "cover": "istanbul cover _mocha -- --recursive test/**/*.test.js"
   },
