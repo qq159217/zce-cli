@@ -42,21 +42,21 @@ $ npm i zce-cli -g
 
 ```sh
 # list available official templates
-$ zce list
+$ zce list [-s|--short] [--debug]
 
 # generate a new project from a template
-$ zce init <template-name> my-project
+$ zce init <template-name> my-project [--offline] [--debug]
 ```
 
-## Official Templates
-
-> https://github.com/zce-templates
+## Official Templates (WIP)
 
 - [nm](https://github.com/zce-templates/nm) - Node module boilerplate
 - [jekyll](https://github.com/zce-templates/jekyll) - Static site by Jekyll
 - [webapp](https://github.com/zce-templates/webapp) - Modern web app
 - [x-pages](https://github.com/zce-templates/x-pages) - Static site by x-pages
 - [electron](https://github.com/zce-templates/electron) - Electron app
+
+> more: https://github.com/zce-templates
 
 ## TODOS
 
@@ -67,7 +67,12 @@ $ zce init <template-name> my-project
 - [x] unit test
 - [x] Coverage
 - [ ] e2e test
+- [ ] Official Templates
 - [ ] CLI docs
 - [ ] Template docs
 - [ ] CLI update notify
 - [ ] Plugins
+
+## License
+
+[MIT](LICENSE) &copy; [汪磊](https://zce.me)
