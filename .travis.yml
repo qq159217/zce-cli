@@ -24,7 +24,7 @@ before_script:
   - yarn
 
 script:
-  - yarn test
+  # - yarn test
   - yarn cover
 
 after_script:
