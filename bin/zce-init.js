@@ -23,37 +23,7 @@ program
   .parse(process.argv)
   .args.length || program.help()
 
-const dest = path.resolve(program.args[1] || '.')
+const { args, offline, debug } = program
+const [ template, target ] = args
 
-init({
-  /**
-   * Destination path
-   * @type {String}
-   */
-  dest: dest,
-  /**
-   * Default name
-   * @type {String}
-   */
-  name: path.basename(dest),
-  /**
-   * Template name
-   * @type {String}
-   */
-  template: program.args[0],
-  /**
-   * Current in place
-   * @type {Boolean}
-   */
-  inPlace: dest === process.cwd(),
-  /**
-   * Offline mode
-   * @type {Boolean}
-   */
-  offline: program.offline,
-  /**
-   * Debug mode
-   * @type {Boolean}
-   */
-  debug: program.debug
-})
+init(template, target, offline, debug)

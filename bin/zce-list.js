@@ -8,4 +8,6 @@ program
   .option('--debug', 'debug mode')
   .parse(process.argv)
 
-list(program)
+const { short, debug } = program
+
+list(short, debug)
