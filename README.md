@@ -3,34 +3,15 @@
 </h1>
 <p align="center">A scaffolding CLI tool for myself, inspired by vue-cli.</p>
 <p align="center">
-  [![Build Status][travis-image]][travis-url]
-  [![Coverage Status][codecov-image]][codecov-url]
-  [![NPM Downloadss][downloads-image]][downloads-url]
-  [![NPM Version][version-image]][version-url]
-  [![License][license-image]][license-url]
-  [![Dependency Status][dependency-image]][dependency-url]
-  [![devDependency Status][devdependency-image]][devdependency-url]
-  [![Code Style][style-image]][style-url]
+  <a href="https://travis-ci.org/zce/zce-cli"><img src="https://img.shields.io/travis/zce/zce-cli.svg" alt="Build Status"></a>
+  <a href="https://codecov.io/gh/zce/zce-cli"><img src="https://img.shields.io/codecov/c/github/zce/zce-cli.svg" alt="Coverage Status"></a>
+  <a href="https://npmjs.org/package/zce-cli"><img src="https://img.shields.io/npm/dm/zce-cli.svg" alt="NPM Downloads"></a>
+  <a href="https://npmjs.org/package/zce-cli"><img src="https://img.shields.io/npm/v/zce-cli.svg" alt="NPM Version"></a>
+  <a href="https://github.com/zce/zce-cli/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/zce-cli.svg" alt="License"></a>
+  <a href="https://david-dm.org/zce/zce-cli"><img src="https://img.shields.io/david/zce/zce-cli.svg" alt="Dependency Status"></a>
+  <a href="https://david-dm.org/zce/zce-cli?type=dev"><img src="https://img.shields.io/david/dev/zce/zce-cli.svg" alt="devDependency Status"></a>
+  <a href="http://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Code Style"></a>
 </p>
-
-[logo-image]: http://cli.zce.me/assets/logo.png
-[logo-url]: http://cli.zce.me
-[travis-image]: https://img.shields.io/travis/zce/zce-cli.svg
-[travis-url]: https://travis-ci.org/zce/zce-cli
-[codecov-image]: https://img.shields.io/codecov/c/github/zce/zce-cli.svg
-[codecov-url]: https://codecov.io/gh/zce/zce-cli
-[downloads-image]: https://img.shields.io/npm/dm/zce-cli.svg
-[downloads-url]: https://npmjs.org/package/zce-cli
-[version-image]: https://img.shields.io/npm/v/zce-cli.svg
-[version-url]: https://npmjs.org/package/zce-cli
-[license-image]: https://img.shields.io/npm/l/zce-cli.svg
-[license-url]: https://github.com/zce/zce-cli/blob/master/LICENSE
-[dependency-image]: https://img.shields.io/david/zce/zce-cli.svg
-[dependency-url]: https://david-dm.org/zce/zce-cli
-[devdependency-image]: https://img.shields.io/david/dev/zce/zce-cli.svg
-[devdependency-url]: https://david-dm.org/zce/zce-cli?type=dev
-[style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
-[style-url]: http://standardjs.com
 
 ## Installation
 
