@@ -2,7 +2,7 @@ const assert = require('assert')
 const list = require('../../lib/list')
 
 describe('lib/list', function () {
-  this.timeout(4000)
+  this.timeout(10000)
   process.env.NODE_ENV = 'testing'
 
   describe('#list-basic', () => {

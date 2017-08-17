@@ -96,14 +96,14 @@ describe('lib/util', () => {
   })
 
   describe('#tildify', () => {
-    it('Should return `~/foo` when input `<homedir>/foo`', () => {
+    it('Should return `~/foo` when input `' + os.homedir() + '/foo`', () => {
       assert.equal(
         '~/foo',
         util.tildify(path.join(os.homedir(), 'foo'))
       )
     })
 
-    it('Should return `~` when input `<homedir>`', () => {
+    it('Should return `~` when input `' + os.homedir() + '`', () => {
       assert.equal(
         '~',
         util.tildify(os.homedir())
@@ -119,14 +119,14 @@ describe('lib/util', () => {
   })
 
   describe('#untildify', () => {
-    it('Should return `<homedir>/foo` when input `~/foo`', () => {
+    it('Should return `' + os.homedir() + '/foo` when input `~/foo`', () => {
       assert.equal(
         path.join(os.homedir(), 'foo'),
         util.untildify('~/foo')
       )
     })
 
-    it('Should return `<homedir>` when input `~`', () => {
+    it('Should return `' + os.homedir() + '` when input `~`', () => {
       assert.equal(
         os.homedir(),
         util.untildify('~')
