@@ -1,9 +1,10 @@
 const assert = require('assert')
 const list = require('../../lib/list')
 
+process.env.NODE_ENV = 'testing'
+
 describe('lib/list', function () {
   this.timeout(10000)
-  process.env.NODE_ENV = 'testing'
 
   describe('#list-basic', () => {
     it('Short return an array and log full list in console', () => {
@@ -21,7 +22,9 @@ describe('lib/list', function () {
     it('Short log full error info and exit process', () => {
       process.env.TEST_API = 'https://api.github.com/users/fake-users-12580/repos'
 
-      return list(false, true).catch(assert.ok)
+      return list(false, true)
+        .then(data => assert.ok(false))
+        .catch(err => assert.throws(() => { throw err }, /Not Found/))
     })
   })
 })

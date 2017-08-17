@@ -1,1 +1,1 @@
-{{zce foo}}
+{{zce 'foo'}}

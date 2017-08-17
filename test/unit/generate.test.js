@@ -10,7 +10,7 @@ describe('lib/generate', () => {
   describe('#minima', () => {
     it('Should generate `minima` → `build/minima`', () => {
       const src = path.join(__dirname, '../mock/minima')
-      const dest = path.join(__dirname, '../build/minima')
+      const dest = path.join(__dirname, '../build/unit/minima')
       const answers = { name: 'minima' }
 
       return generate(src, dest, answers)
@@ -25,7 +25,7 @@ describe('lib/generate', () => {
   describe('#template-option', () => {
     it('Should generate `template` → `build/template`', () => {
       const src = path.join(__dirname, '../mock/template')
-      const dest = path.join(__dirname, '../build/template')
+      const dest = path.join(__dirname, '../build/unit/template')
       const answers = { name: 'template' }
       const options = require(src)
 
@@ -40,7 +40,7 @@ describe('lib/generate', () => {
   describe('#filters-option', () => {
     it('Should generate `filters` → `build/filters`', () => {
       const src = path.join(__dirname, '../mock/filters')
-      const dest = path.join(__dirname, '../build/filters')
+      const dest = path.join(__dirname, '../build/unit/filters')
       const answers = { sass: false }
       const options = require(src)
 
@@ -55,7 +55,7 @@ describe('lib/generate', () => {
   describe('#helpers-option', () => {
     it('Should generate `helpers` → `build/helpers`', () => {
       const src = path.join(__dirname, '../mock/helpers')
-      const dest = path.join(__dirname, '../build/helpers')
+      const dest = path.join(__dirname, '../build/unit/helpers')
       const answers = { name: 'helpers' }
       const options = require(src)
 
@@ -72,12 +72,12 @@ describe('lib/generate', () => {
   describe('#error-handle', () => {
     it('Should catch a error when generate `error`', () => {
       const src = path.join(__dirname, '../mock/error')
-      const dest = path.join(__dirname, '../build/error')
+      const dest = path.join(__dirname, '../build/unit/error')
       const answers = {}
 
       return generate(src, dest, answers)
         .then(files => assert.ok(false))
-        .catch(err => assert.throws(() => { throw err }, /Missing helper: "zce"/))
+        .catch(err => assert.throws(() => { throw err }, Error))
     })
   })
 })
