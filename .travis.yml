@@ -4,11 +4,12 @@ language: node_js
 
 os:
   - linux
-  - osx
+  # - osx
   - windows
 
 node_js:
-  - 6
+  - 6.0.0
+  # - 6
   - 7
   - 8
 
@@ -24,7 +25,7 @@ before_script:
   - yarn
 
 script:
-  # - yarn test
+  - yarn lint
   - yarn cover
 
 after_script:

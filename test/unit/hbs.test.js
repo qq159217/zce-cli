@@ -2,13 +2,6 @@ const assert = require('assert')
 const hbs = require('../../lib/hbs')
 
 describe('lib/hbs', () => {
-  // describe('#setOptions', () => {
-  //   it('Should return true when the path exists', () => {
-  //     hbs.setOptions({})
-  //     assert.ok()
-  //   })
-  // })
-
   describe('#render', () => {
     it('Should return `hello world` when input `hello {{foo}}`', () => {
       assert.equal(

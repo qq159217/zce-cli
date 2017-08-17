@@ -5,7 +5,7 @@ const rimraf = require('rimraf')
 const generate = require('../../lib/generate')
 
 describe('lib/generate', () => {
-  before(() => rimraf.sync(path.join(__dirname, '../build')))
+  rimraf.sync(path.join(__dirname, '../build'))
 
   describe('#generate-basic', () => {
     it('should generate basic -> build/basic', () => {

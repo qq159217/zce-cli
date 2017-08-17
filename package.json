@@ -24,10 +24,10 @@
   },
   "scripts": {
     "lint": "eslint . --fix",
-    "unit": "mocha test/unit/*.test.js",
-    "e2e": "mocha test/e2e/*.test.js",
-    "test": "npm run lint && npm run unit && npm run e2e",
-    "cover": "istanbul cover _mocha -- --recursive test/**/*.test.js"
+    "test": "npm run lint && npm run test:unit && npm run test:e2e",
+    "test:unit": "mocha test/unit/*.test.js",
+    "test:e2e": "mocha test/e2e/*.test.js",
+    "cover": "istanbul cover _mocha -- test/**/*.test.js"
   },
   "dependencies": {
     "chalk": "^2.1.0",

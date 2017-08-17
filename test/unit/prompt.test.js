@@ -1,22 +1,6 @@
 const assert = require('assert')
-const inquirer = require('inquirer')
 const prompt = require('../../lib/prompt')
-
-const patchInquirer = fake => {
-  inquirer.prompt = questions => {
-    const result = {}
-    questions.forEach(question => {
-      const key = question.name
-      if (question.validate) {
-        question.validate(fake[key])
-        // const valid = question.validate(fake[key])
-        // if (!valid) throw new Error(valid)
-      }
-      result[key] = fake[key] || question.default
-    })
-    return Promise.resolve(result)
-  }
-}
+const patchInquirer = require('../common/patch-inquirer')
 
 describe('lib/prompt', () => {
   describe('#prompt-basic', () => {

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const path = require('path')
 const chalk = require('chalk')
 const program = require('commander')
 const init = require('../lib/init')
