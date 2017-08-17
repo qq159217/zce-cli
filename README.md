@@ -52,9 +52,9 @@ $ zce init <template-name> my-project [--offline] [--debug]
 - [x] List
 - [x] Repo default
 - [x] unit test
-- [x] e2e test
+- [x] Restructure test
 - [x] Coverage
-- [ ] Restructure e2e test
+- [ ] e2e test
 - [ ] Official Templates
 - [ ] CLI docs
 - [ ] Template docs
