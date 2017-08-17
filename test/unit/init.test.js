@@ -11,7 +11,7 @@ describe('lib/init', function () {
   this.timeout(20000)
   rimraf.sync(path.join(__dirname, '../build'))
 
-  it('WIP', done => {
+  it('Initial command', done => {
     // case 1: basic
     patchInquirer({ name: 'foo' })
     init('zce-mock/e2e-test', path.join(__dirname, '../build/e2e/temp'), true, true)
