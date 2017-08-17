@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="http://cli.zce.me"><img src="http://cli.zce.me/assets/logo.png" alt="zce-cli"></a>
+  <a href="http://cli.zce.me"><img src="http://cli.zce.me/assets/logo.png" alt="zce-cli" height="380"></a>
 </h1>
 <p align="center">A scaffolding CLI tool for myself, inspired by vue-cli.</p>
 <p align="center">
