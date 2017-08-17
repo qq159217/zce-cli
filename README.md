@@ -1,7 +1,7 @@
-<h1 align="center">
+<p align="center">
   <a href="http://cli.zce.me"><img src="http://cli.zce.me/assets/logo.png" alt="zce-cli" height="380"></a>
-</h1>
-<p align="center">A scaffolding CLI tool for myself, inspired by vue-cli.</p>
+  <p align="center">A scaffolding CLI tool for myself, inspired by vue-cli.</p>
+</p>
 <p align="center">
   <a href="https://travis-ci.org/zce/zce-cli"><img src="https://img.shields.io/travis/zce/zce-cli.svg" alt="Build Status"></a>
   <a href="https://codecov.io/gh/zce/zce-cli"><img src="https://img.shields.io/codecov/c/github/zce/zce-cli.svg" alt="Coverage Status"></a>
