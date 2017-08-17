@@ -1,5 +1,8 @@
-# zce-cli
+<h1 align="center">[![zce-cli][logo-image]][logo-url]</h1>
 
+<p align="center">A scaffolding CLI tool for myself, inspired by vue-cli.</p>
+
+<p align="center">
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][codecov-image]][codecov-url]
 [![NPM Downloadss][downloads-image]][downloads-url]
@@ -9,7 +12,10 @@
 [![Dependency Status][dependency-image]][dependency-url]
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
+</p>
 
+[logo-image]: http://cli.zce.me/assets/logo.png
+[logo-url]: http://cli.zce.me
 [travis-image]: https://img.shields.io/travis/zce/zce-cli.svg
 [travis-url]: https://travis-ci.org/zce/zce-cli
 [codecov-image]: https://img.shields.io/codecov/c/github/zce/zce-cli.svg
@@ -26,8 +32,6 @@
 [devdependency-url]: https://david-dm.org/zce/zce-cli?type=dev
 [style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [style-url]: http://standardjs.com
-
-> A very simple scaffolding CLI tool for myself
 
 ## Installation
 
@@ -51,8 +55,10 @@ $ zce init <template-name> my-project [--offline] [--debug]
 ## Official Templates (WIP)
 
 - [nm](https://github.com/zce-templates/nm) - Node module boilerplate
-- [jekyll](https://github.com/zce-templates/jekyll) - Static site by Jekyll
 - [webapp](https://github.com/zce-templates/webapp) - Modern web app
+- [react](https://github.com/zce-templates/react) - Modern web app by React.js
+- [vue](https://github.com/zce-templates/vue) - Modern web app by Vue.js
+- [jekyll](https://github.com/zce-templates/jekyll) - Static site by Jekyll
 - [x-pages](https://github.com/zce-templates/x-pages) - Static site by x-pages
 - [electron](https://github.com/zce-templates/electron) - Electron app
 
