@@ -77,9 +77,7 @@ describe('lib/generate', () => {
 
       return generate(src, dest, answers)
         .then(files => assert.ok(false))
-        .catch(err => {
-          assert.throws(() => { throw err }, /Missing helper: "zce"/)
-        })
+        .catch(err => assert.throws(() => { throw err }, /Missing helper: "zce"/))
     })
   })
 })

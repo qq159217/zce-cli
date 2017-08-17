@@ -9,47 +9,50 @@ describe('lib/fetch', function () {
   this.timeout(10000)
   rimraf.sync(path.join(os.homedir(), '.zce-templates/*'))
 
-  describe('#fetch-with-template-name', () => {
-    it('should fetch repo: https://github.com/zce-templates/mock-unit', () => {
-      return fetch('mock-unit')
+  describe('#with-template-name', () => {
+    it('Should fetch repo from `https://github.com/zce-mock/unit-test`', () => {
+      return fetch('zce-mock/unit-test')
         .then(source => assert.ok(fs.existsSync(source)))
+        .catch(err => assert.ok(false))
+    })
+
+    // rimraf cache when cache exist
+    it('Should fetch repo from `https://github.com/zce-mock/unit-test`', () => {
+      return fetch('zce-mock/unit-test')
+        .then(source => assert.ok(fs.existsSync(source)))
+        .catch(err => assert.ok(false))
     })
   })
 
-  describe('#fetch-with-repo-name', () => {
-    it('should fetch repo: https://github.com/zce-templates/mock-unit', () => {
-      return fetch('zce-templates/mock-unit')
+  describe('#with-offline-mode', () => {
+    // cache exist
+    it('Should fetch repo from `https://github.com/zce-mock/unit-test`', () => {
+      return fetch('zce-mock/unit-test', true)
         .then(source => assert.ok(fs.existsSync(source)))
+        .catch(err => assert.ok(false))
     })
 
-    it('should fetch repo: https://github.com/zce-templates/mock-unit', () => {
-      return fetch('zce-templates/mock-unit')
+    // cache not exist
+    it('Should fetch repo from `https://github.com/zce-mock/unit-test-2`', () => {
+      return fetch('zce-mock/unit-test-2', true)
         .then(source => assert.ok(fs.existsSync(source)))
-    })
-  })
-
-  describe('#fetch-with-offline-mode', () => {
-    it('should find cache: https://github.com/zce-templates/mock-unit', () => {
-      return fetch('mock-unit', true)
-        .then(source => assert.ok(fs.existsSync(source)))
-    })
-
-    it('should find cache: https://github.com/zce-templates/demo', () => {
-      return fetch('zce-templates/demo', true)
-        .then(source => assert.ok(fs.existsSync(source)))
+        .catch(err => assert.ok(false))
     })
   })
 
-  describe('#fetch-with-full-uri', () => {
-    it('should fetch repo: https://coding.net/u/zce/p/mock-unit/git/archive/master', () => {
+  describe('#with-full-uri', () => {
+    it('Should fetch repo from `https://coding.net/u/zce/p/mock-unit/git/archive/master`', () => {
       return fetch('https://coding.net/u/zce/p/mock-unit/git/archive/master')
         .then(source => assert.ok(fs.existsSync(source)))
+        .catch(err => assert.ok(false))
     })
   })
 
-  describe('#fetch-with-error', () => {
-    it('should fetch repo failed: https://github.com/zce-templates/fake-unit', () => {
-      return fetch('zce-templates/fake-unit').catch(assert.ok)
+  describe('#with-not-exist', () => {
+    it('Should fetch repo failed: `https://github.com/zce-mock/fake-unit`', () => {
+      return fetch('zce-mock/fake-unit')
+        .then(source => assert.ok(false))
+        .catch(err => assert.throws(() => { throw err }, /Not Found/))
     })
   })
 })
