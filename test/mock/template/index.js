@@ -1,3 +1,3 @@
 module.exports = {
-  template: 'src'
+  template: 'source'
 }
