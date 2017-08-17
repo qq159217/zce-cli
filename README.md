@@ -1,17 +1,16 @@
-<h1 align="center">[![zce-cli][logo-image]][logo-url]</h1>
-
+<h1 align="center">
+  <a href="http://cli.zce.me"><img src="http://cli.zce.me/assets/logo.png" alt="zce-cli"></a>
+</h1>
 <p align="center">A scaffolding CLI tool for myself, inspired by vue-cli.</p>
-
 <p align="center">
-[![Build Status][travis-image]][travis-url]
-[![Coverage Status][codecov-image]][codecov-url]
-[![NPM Downloadss][downloads-image]][downloads-url]
-[![NPM Version][version-image]][version-url]
-[![License][license-image]][license-url]
-
-[![Dependency Status][dependency-image]][dependency-url]
-[![devDependency Status][devdependency-image]][devdependency-url]
-[![Code Style][style-image]][style-url]
+  [![Build Status][travis-image]][travis-url]
+  [![Coverage Status][codecov-image]][codecov-url]
+  [![NPM Downloadss][downloads-image]][downloads-url]
+  [![NPM Version][version-image]][version-url]
+  [![License][license-image]][license-url]
+  [![Dependency Status][dependency-image]][dependency-url]
+  [![devDependency Status][devdependency-image]][devdependency-url]
+  [![Code Style][style-image]][style-url]
 </p>
 
 [logo-image]: http://cli.zce.me/assets/logo.png
