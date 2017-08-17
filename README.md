@@ -8,6 +8,7 @@
   <a href="https://npmjs.org/package/zce-cli"><img src="https://img.shields.io/npm/dm/zce-cli.svg" alt="NPM Downloads"></a>
   <a href="https://npmjs.org/package/zce-cli"><img src="https://img.shields.io/npm/v/zce-cli.svg" alt="NPM Version"></a>
   <a href="https://github.com/zce/zce-cli/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/zce-cli.svg" alt="License"></a>
+  <br>
   <a href="https://david-dm.org/zce/zce-cli"><img src="https://img.shields.io/david/zce/zce-cli.svg" alt="Dependency Status"></a>
   <a href="https://david-dm.org/zce/zce-cli?type=dev"><img src="https://img.shields.io/david/dev/zce/zce-cli.svg" alt="devDependency Status"></a>
   <a href="http://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Code Style"></a>
