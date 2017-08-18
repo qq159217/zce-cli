@@ -54,6 +54,11 @@ Config file can contain the following fields:
 - Type: `Object`
 - Details: Used to collect user input in CLI.
 
+#### complete
+
+- Type: `string` or `Function`
+- Details: Generate completed callback. if got a string, print it to the console.
+
 #### filters
 
 - Type: `Object`
@@ -68,9 +73,13 @@ Config file can contain the following fields:
 
 - Type: `Object`
 - Details: Used to add custom metalsmith plugins in the chain.
-
-#### complete
-
-- Type: `string` or `Function`
-- Details: Generate completed callback. if got a string, print it to the console.
-
+- Usage:
+  ```js
+  module.exports = {
+    plugin: (files, app, next) => {
+      console.log('before filter')
+      next()
+      console.log('after render')
+    }
+  }
+  ```

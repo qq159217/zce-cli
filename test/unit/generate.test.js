@@ -80,4 +80,19 @@ describe('lib/generate', () => {
         .catch(err => assert.throws(() => { throw err }, Error))
     })
   })
+
+  describe('#plugin-option', () => {
+    it('Should generate `plugin` → `build/plugin`', () => {
+      const src = path.join(__dirname, '../mock/plugin')
+      const dest = path.join(__dirname, '../build/unit/plugin')
+      const answers = { name: 'plugin' }
+      const options = require(src)
+
+      return generate(src, dest, answers, options).then(files => {
+        assert.ok(files['zce.txt'])
+        const content = fs.readFileSync(path.join(dest, 'zce.txt'), 'utf8')
+        assert.equal('hey plugin intercept', content.trim())
+      })
+    })
+  })
 })

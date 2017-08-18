@@ -104,12 +104,12 @@ To create and distribute your own template, refer to [our official documentation
 - [x] List command
 - [x] unit test
 - [x] Coverage
+- [x] Plugins
 - [ ] e2e test
 - [ ] CLI docs
 - [ ] Official Templates
 - [ ] Template docs
 - [ ] CLI update notify
-- [ ] Plugins
 
 ## Contributing
 

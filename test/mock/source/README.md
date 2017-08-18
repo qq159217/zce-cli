@@ -1,9 +1,9 @@
-# template
+# source
 
-> Custom template directory
+> Custom template source directory
 
 ```js
 module.exports = {
-  template: 'source'
+  source: 'src'
 }
 ```
