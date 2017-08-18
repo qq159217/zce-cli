@@ -80,11 +80,9 @@ Current available templates list:
 - [x-pages](https://github.com/zce-templates/x-pages) - Static site by x-pages
 - [electron](https://github.com/zce-templates/electron) - Electron app
 
-Maybe more: 
+Maybe more: https://github.com/zce-templates
 
-visit: https://github.com/zce-templates
-
-You can also run `zce ls` to see all available official templates in real time.
+> You can also run `zce ls` to see all available official templates in real time.
 
 ### Custom Templates
 
