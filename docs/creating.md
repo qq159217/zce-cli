@@ -1,6 +1,7 @@
 # Writing your own template
 
-<!-- TODO: docs: Writing your own template -->
+In reading this section, you'll learn how to create and distribute your own template.
+
 ## Template structure
 
 ```
@@ -12,6 +13,14 @@
     │   └── index.html ······························ Any file (Auto render mustache)
     ├── index.js ···································· Entry point (Optional, Configuration file)
     └── README.md ··································· README (Optional)
+```
+
+## Generate a template from a template
+
+We built a [template](https://github.com/zce-templates/template) to help users get started with their own template. Feel free to use it to bootstrap your own template once you understand the below concepts.
+
+```sh
+$ zce init template my-template
 ```
 
 ## Configuration
