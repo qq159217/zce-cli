@@ -12,8 +12,7 @@ describe('cli', function () {
       const init = spawn(process.execPath, [path.join(__dirname, '../../bin/zce-list.js'), 'list'], {
         env: {
           NODE_ENV: 'testing',
-          TEST_API: 'https://api.github.com/users/fake-users/repos',
-          GITHUB_PAT: process.env.GITHUB_PAT
+          TEST_API: 'https://api.github.com/users/fake-users/repos'
         }
       })
 
@@ -24,6 +23,7 @@ describe('cli', function () {
       })
 
       init.on('error', err => {
+        console.log(err)
         assert.ok(!err)
         done()
       })

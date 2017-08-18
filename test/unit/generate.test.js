@@ -22,17 +22,17 @@ describe('lib/generate', () => {
     })
   })
 
-  describe('#template-option', () => {
-    it('Should generate `template` → `build/template`', () => {
-      const src = path.join(__dirname, '../mock/template')
-      const dest = path.join(__dirname, '../build/unit/template')
-      const answers = { name: 'template' }
+  describe('#source-option', () => {
+    it('Should generate `source` → `build/source`', () => {
+      const src = path.join(__dirname, '../mock/source')
+      const dest = path.join(__dirname, '../build/unit/source')
+      const answers = { name: 'source' }
       const options = require(src)
 
       return generate(src, dest, answers, options).then(files => {
         assert.ok(files['zce.txt'])
         const content = fs.readFileSync(path.join(dest, 'zce.txt'), 'utf8')
-        assert.equal('hey template', content.trim())
+        assert.equal('hey source', content.trim())
       })
     })
   })
