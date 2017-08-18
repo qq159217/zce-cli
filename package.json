@@ -24,9 +24,9 @@
   },
   "scripts": {
     "lint": "eslint . --fix",
-    "test": "npm run lint && npm run test:unit && npm run test:e2e",
     "test:unit": "mocha test/unit/*.test.js",
     "test:e2e": "mocha test/e2e/*.test.js",
+    "test": "npm run lint && npm run test:unit && npm run test:e2e",
     "cover": "istanbul cover _mocha -- test/**/*.test.js"
   },
   "dependencies": {
