@@ -1,11 +1,17 @@
-# helpers
+# complete
 
-> Custom template helpers (handlebars helpers)
+> Custom complete callback
 
 ```js
 module.exports = {
-  helpers: {
-    uppercase: str => str.toUpperCase()
+  complete: context => {
+    console.log('  To get started:')
+    console.log()
+    context.inPlace || console.log(`    $ cd ${require('path').relative(process.cwd(), context.dest)}`)
+    console.log('    $ npm install')
+    console.log('    $ npm run dev')
+    console.log()
+    console.log('  Good luck~')
   }
 }
 ```

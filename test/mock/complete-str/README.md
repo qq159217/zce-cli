@@ -1,11 +1,9 @@
-# helpers
+# complete
 
-> Custom template helpers (handlebars helpers)
+> Custom complete log
 
 ```js
 module.exports = {
-  helpers: {
-    uppercase: str => str.toUpperCase()
-  }
+  complete: '{{name}}\n{{@src}} → {{@dest}}'
 }
 ```
